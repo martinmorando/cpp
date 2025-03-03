@@ -32,15 +32,15 @@ int main() {
 	std::cout << "------------------------START!------------------------\n";
 
 	int keepPlaying = 1;
-
 	while (keepPlaying == 1) {
-
 
 		// Ask player 1 to move. If input is invalid, try 2 more times
 		for (int t=0; t<3; t++) {			
 			std::cout << player1 << ", your turn: ";
 			std::cin >> reply1;
 
+			reply1 = normalizeInput(reply1);
+			
 			if (validateInput(reply1)) {
 				break;
 			} else {
@@ -56,6 +56,8 @@ int main() {
 		for (int t=0; t<3; t++) {			
 			std::cout << player2 << ", your turn: ";
 			std::cin >> reply2;
+
+			reply2 = normalizeInput(reply2);
 
 			if (validateInput(reply2)) {
 				break;

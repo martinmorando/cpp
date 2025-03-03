@@ -8,5 +8,7 @@ std::vector<std::string> savePlayerMove(std::vector<std::string> gameBoard, std:
 
 std::string getWinnerLetter(std::vector<std::string> gameBoard);
 
+std::string normalizeInput(std::string input);
+
 bool validateInput(std::string input);
 

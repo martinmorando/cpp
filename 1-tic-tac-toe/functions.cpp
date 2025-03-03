@@ -99,6 +99,24 @@ std::string getWinnerLetter(std::vector<std::string> gameBoard) {
 }
 
 
+// Accept several formats as input (1A and 1a)
+std::string normalizeInput(std::string input) {
+
+	// (1|2|3) + (A|B|C)
+	std::string result;
+
+	// Number part (treated as string)
+	result += input[0];
+
+	// Letter part
+	result += toupper(input[1]);
+
+	return result;
+
+}
+
+
+
 // Accept only 1A, 1B, 1C, 2A, 2B, 2C, 3A, 3B, 3C while playing
 bool validateInput(std::string input) {
 
