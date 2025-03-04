@@ -39,12 +39,12 @@ int main() {
 			std::cout << player1 << ", your turn: ";
 			std::cin >> reply1;
 
-			reply1 = normalizeInput(reply1);
+			reply1 = validateInput(reply1);
 			
-			if (validateInput(reply1)) {
-				break;
-			} else {
+			if (reply1 == "invalid") {
 				std::cout << "Invalid input. Try again. \n";
+			} else {
+				break;
 			}
 		}
 		
@@ -57,12 +57,12 @@ int main() {
 			std::cout << player2 << ", your turn: ";
 			std::cin >> reply2;
 
-			reply2 = normalizeInput(reply2);
-
-			if (validateInput(reply2)) {
-				break;
-			} else {
+			reply2 = validateInput(reply2);
+			
+			if (reply2 == "invalid") {
 				std::cout << "Invalid input. Try again. \n";
+			} else {
+				break;
 			}
 		}
 

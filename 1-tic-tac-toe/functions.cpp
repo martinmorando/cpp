@@ -99,34 +99,57 @@ std::string getWinnerLetter(std::vector<std::string> gameBoard) {
 }
 
 
-// Accept several formats as input (1A and 1a)
-std::string normalizeInput(std::string input) {
 
-	// (1|2|3) + (A|B|C)
+// Accept only:
+// 1A, 1B, 1C, 2A, 2B, 2C, 3A, 3B, 3C
+// A1, B1, C1, A2, B2, C2, A3, B3, C3
+// 1a, 1b, 1c, 2a, 2b, 2c, 3a, 3b, 3c
+// a1, b1, c1, a2, b2, c2, a3, b3, c3
+std::string validateInput(std::string input) {
+	
 	std::string result;
 
-	// Number part (treated as string)
-	result += input[0];
-
-	// Letter part
-	result += toupper(input[1]);
-
-	return result;
-
-}
-
-
-
-// Accept only 1A, 1B, 1C, 2A, 2B, 2C, 3A, 3B, 3C while playing
-bool validateInput(std::string input) {
-
 	if (input.length() != 2) {
-		return false;
+
+		result += "invalid";
+
 	}
+	else if ((isdigit(input[0])) && (isalpha(input[1]))) {
 
-	char number = input[0];
-	char letter = input[1];
+		// (1|2|3) + (A|B|C)
+		result += input[0];
+		result += toupper(input[1]);
 
-	return ((number == '1' || number == '2' || number == '3') && (letter == 'A' || letter == 'B' || letter == 'C') );
+		if (!(result[0] == '1' || result[0] == '2' || result[0] == '3')) {
+			result = "invalid";
+		}
+
+		if (!(result[1] == 'A' || result[1] == 'B' || result[1] == 'C')) {
+			result = "invalid";
+		}
+
+	}
+	else if ((isalpha(input[0])) && (isdigit(input[1]))) {
+
+		// (A|B|C) + (1|2|3). Convert it to (1|2|3) + (A|B|C)
+		result += input[1];
+		result += toupper(input[0]);
+
+		if (!(result[0] == '1' || result[0] == '2' || result[0] == '3')) {
+			result = "invalid";
+		}
+
+		if (!(result[1] == 'A' || result[1] == 'B' || result[1] == 'C')) {
+			result = "invalid";
+		}
+
+	}
+	else {
+
+		result += "invalid";
+
+	}
+	
+	return result;
 
 }
