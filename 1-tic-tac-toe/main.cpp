@@ -1,4 +1,6 @@
 #include "functions.hpp"
+#include <cstdlib> // To clear the console
+#include <unistd.h> // To make pauses
 
 int main() {
 
@@ -11,28 +13,40 @@ int main() {
 	std::string reply1;
 	std::string reply2;
 
-
 	// Welcome message and request player names
+	system("clear");
 	std::cout << "Welcome to Tic-Tac-Toe!\n";
-	std::cout << "Name of player 1: ";
+	std::cout << "\n";
+	std::cout << "Name of player 1 (x): ";
 	std::cin >> player1;
-	std::cout << "Name of player 2: ";
+	std::cout << "Name of player 2 (o): ";
 	std::cin >> player2;
+	std::cout << "\n";
+	std::cout << player1 << ", " << player2 << ", you will indicate the position with a number and a letter.\n";
+	std::cout << "\n";
 
-	// Basic intro and example
-	std::cout << player1 << ", you will be x.\n";
-	std::cout << player2 << ", you will be o.\n";
-	std::cout << "Indicate the position with number and letter.\n";
-	std::cout << "------------------------EXAMPLE!------------------------\n";
-	std::cout << "3B means:\n";
-	std::cout << "[ ][A][B][C]" << "\n";
-	std::cout << "[1][ ][ ][ ]" << "\n";
-	std::cout << "[2][ ][ ][ ]" << "\n";
-	std::cout << "[3][ ][x][ ]" << "\n";
+	sleep(3);
+	system("clear");
+
+	std::cout << "For example, 3B (or b3) means:\n";
+	std::cout << "\n";
+	std::cout << "    A  B  C " << "\n";
+	std::cout << " 1 [ ][ ][ ]" << "\n";
+	std::cout << " 2 [ ][ ][ ]" << "\n";
+	std::cout << " 3 [ ][x][ ]" << "\n";
+	std::cout << "\n";
+
+	sleep(5);
+	system("clear");
+
 	std::cout << "------------------------START!------------------------\n";
 
 	int keepPlaying = 1;
 	while (keepPlaying == 1) {
+
+		system("clear");
+		printGameBoard(gameBoard);
+		std::cout << '\n';
 
 		// Ask player 1 to move. If input is invalid, try 2 more times
 		for (int t=0; t<3; t++) {			
@@ -48,8 +62,10 @@ int main() {
 			}
 		}
 		
+		system("clear");
 		gameBoard = savePlayerMove(gameBoard, gameMap, 1, reply1);
 		printGameBoard(gameBoard);
+		std::cout << '\n';
 
 
 		// Ask player 2 to move. If input is invalid, try 2 more times
@@ -66,9 +82,11 @@ int main() {
 			}
 		}
 
+		system("clear");
 		gameBoard = savePlayerMove(gameBoard, gameMap, 2, reply2);
 		printGameBoard(gameBoard);
 
+		std::cout << '\n';
 
 		// Check if there is a winner
 		std::string winnerLetter = getWinnerLetter(gameBoard);

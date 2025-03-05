@@ -5,10 +5,10 @@
 // Print current game board status
 void printGameBoard(std::vector<std::string> gameBoard) {
 
-	std::cout << "[ ][A][B][C]" << "\n";
-	std::cout << "[1]["<< gameBoard[0] << "][" << gameBoard[1] << "][" << gameBoard[2] << "]" << "\n";
-	std::cout << "[2]["<< gameBoard[3] << "][" << gameBoard[4] << "][" << gameBoard[5] << "]" << "\n";
-	std::cout << "[3]["<< gameBoard[6] << "][" << gameBoard[7] << "][" << gameBoard[8] << "]" << "\n";
+	std::cout << "    A  B  C " << "\n";
+	std::cout << " 1 ["<< gameBoard[0] << "][" << gameBoard[1] << "][" << gameBoard[2] << "]" << "\n";
+	std::cout << " 2 ["<< gameBoard[3] << "][" << gameBoard[4] << "][" << gameBoard[5] << "]" << "\n";
+	std::cout << " 3 ["<< gameBoard[6] << "][" << gameBoard[7] << "][" << gameBoard[8] << "]" << "\n";
 
 }
 
