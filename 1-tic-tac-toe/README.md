@@ -6,8 +6,9 @@ Ideas to implement:
 - [ ] Play n rounds, count points and determine winner
 - [ ] Polish UI (for example, bigger game board and/or ASCII art)
 	- [x] Neater game board 
-	- [x] Use of pauses
+	- [x] Use of pauses	
 	- [x] Clear console
+	- [ ] Clear console [do again without system()](../lib-ncurses/README.md)
 	- [ ] ASCII art
 	- [ ] Change colors?
 	- [ ] Sounds and/or music?
