@@ -153,3 +153,30 @@ std::string validateInput(std::string input) {
 	return result;
 
 }
+
+
+int checkForWinner(std::vector<std::string> gameBoard, std::string player1, std::string player2, int &keepPlaying) {
+
+	std::string winnerLetter = getWinnerLetter(gameBoard);
+
+	if (winnerLetter == "x") {
+		std::cout << player1 << " won! \n";
+		keepPlaying = 0;
+		return 0;
+	} 
+	else if (winnerLetter == "o") {
+		std::cout << player2 << " won! \n";
+		keepPlaying = 0;
+		return 0;
+	}
+	else if (winnerLetter == "tie") {
+		std::cout << "It's a tie! \n";
+		keepPlaying = 0;
+		return 0;
+	}
+	else {
+		// Continue playing
+		return keepPlaying = 1;		
+	}
+
+}

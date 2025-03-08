@@ -2,7 +2,7 @@ Very basic C++ implementation of Tic-Tac-Toe while learning the language. This c
 
 Ideas to implement:
 - [x] Accept multiple formats as input (1A, 1a, a1, A1)
-- [ ] Check for winner after player1 moves
+- [x] Check for winner after player1 moves
 - [ ] Play n rounds, count points and determine winner
 - [ ] Polish UI (for example, bigger game board and/or ASCII art)
 	- [x] Neater game board 
@@ -16,5 +16,5 @@ Ideas to implement:
 - [ ] Determine randomly which player goes first (if users want)
 - [ ] Single-player mode (randomized)
 - [ ] Comment more
-- [ ] Refactor (too much repetitive code)
+- [ ] Refactor (too much repetitive code) (partially done)
 - [ ] Test thoroughly

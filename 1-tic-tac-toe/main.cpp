@@ -63,6 +63,10 @@ int main() {
 		printGameBoard(gameBoard);
 		std::cout << '\n';
 
+		// Check if there is a winner
+		if (checkForWinner(gameBoard, player1, player2, keepPlaying) == 0) {
+			break;
+		}
 
 		// Ask player 2 to move. If input is invalid, try 2 more times
 		for (int t=0; t<3; t++) {			
@@ -85,26 +89,8 @@ int main() {
 		std::cout << '\n';
 
 		// Check if there is a winner
-		std::string winnerLetter = getWinnerLetter(gameBoard);
-
-		if (winnerLetter == "x") {
-			std::cout << player1 << " won! \n";
-			keepPlaying = 0;
-			return 0;
-		} 
-		else if (winnerLetter == "o") {
-			std::cout << player2 << " won! \n";
-			keepPlaying = 0;
-			return 0;
-		}
-		else if (winnerLetter == "tie") {
-			std::cout << "It's a tie! \n";
-			keepPlaying = 0;
-			return 0;
-		}
-		else {
-			// Continue playing
-			;
+		if (checkForWinner(gameBoard, player1, player2, keepPlaying) == 0) {
+			break;
 		}
 
 	}
