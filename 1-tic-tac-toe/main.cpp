@@ -5,13 +5,9 @@
 int main() {
 
 	std::vector<std::string> gameMap = {"1A", "1B", "1C", "2A", "2B", "2C", "3A", "3B", "3C"};
-	std::vector<std::string> gameBoard = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
-
-	std::string player1;
-	std::string player2;
-
-	std::string reply1;
-	std::string reply2;
+	std::vector<std::string> gameBoard(9, " ");
+	std::string player1, player2;
+	std::string reply1, reply2;
 
 	// Welcome message and request player names
 	system("clear");
