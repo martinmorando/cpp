@@ -1,3 +1,7 @@
+/*
+    User input
+*/
+
 #include <iostream>
 
 int main() {

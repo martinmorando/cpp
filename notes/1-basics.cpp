@@ -2,6 +2,8 @@
     Basics
 */
 
+// Single line comment
+
 // Include library "iostream" (input/output stream)
 #include <iostream>
 
@@ -13,5 +15,9 @@ int main() {
 
     // The program ended successfully
     return 0;
+
+    /*
+        Multi-line comment
+    */
 
 }
