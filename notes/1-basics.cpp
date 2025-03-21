@@ -12,7 +12,7 @@
 // Gets called automatically when the program is executed
 int main() {
 
-    // Print Hi and a line break. "std::cout" is pronounced "see out"
+    // Print Hi and a line break. "std::cout" is pronounced "standard see out"
     std::cout << "Hi\n";
 
     // The program ended successfully
