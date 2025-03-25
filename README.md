@@ -1,4 +1,4 @@
-# C++
+# Notes, Code, and Experiments with C++
 
 My notes on C++ and various programs I write while learning the syntax. I aim for a deeper understanding of the language over the long term.
 
@@ -8,10 +8,10 @@ My notes on C++ and various programs I write while learning the syntax. I aim fo
 - General-purpose coding language, derived from C language
 
 
-## Motivations to learn C++
-- I want to gain a better understanding of memory manipulation
+## Motivations for Mastering C++
+- I want to gain a better understanding of memory management
 - Bitcoin Core is written in C++ and I want to explore its source code directly to understand its workings without intermediaries, the intact truth
-- Its a must in order to join the league of shadowy super coders, of course
+- It's a must in order to join the league of shadowy super coders, of course
 
 
 ## Programs
@@ -19,10 +19,10 @@ My notes on C++ and various programs I write while learning the syntax. I aim fo
 
 
 ## Compiling & Running C++ Programs
-### Alternative A: fast
+### - Alternative A: fast
 1. Compile the source code to generate the executable (AKA machine code or object code), using command: `g++ name.cpp`. 
-2. Run the executable file, using command: `./name.out`
+2. Run the executable file, using command: `./a.out`
 
-### Alternative B: custom name
+### - Alternative B: custom name
 1. Compile: `g++ file.cpp -o customname`
 2. Run: `./customname`
