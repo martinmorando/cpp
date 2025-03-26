@@ -13,6 +13,7 @@ int main() {
     std::cout << "Enter your username: ";
 
     // Receive user input. Notice the direction of ">>"
+    // "cin": character input
     std::cin >> username;
 
     // Display message
