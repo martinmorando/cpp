@@ -20,9 +20,12 @@ My notes on C++ and various programs I write while learning the syntax. I aim fo
 
 ## Compiling & Running C++ Programs
 ### - Alternative A: fast
-1. Compile the source code to generate the executable (AKA machine code or object code), using command: `g++ name.cpp`. 
+1. Compile the source code to generate the executable (AKA machine code or object code), using command: `g++ main.cpp`
+
+If there is more than one file, use: `g++ main.cpp functions.cpp`
+
 2. Run the executable file, using command: `./a.out`
 
 ### - Alternative B: custom name
-1. Compile: `g++ file.cpp -o customname`
+1. Compile: `g++ main.cpp -o customname`
 2. Run: `./customname`
