@@ -6,7 +6,8 @@
     - Includes reference to header.
     - Note: use simpler file names.
     - Compile program with command:
-       g++ 012-multiple-files-functions.cpp 012-multiple-files-header.hpp 012-multiple-files-main.cpp
+       g++ 012-multiple-files-functions.cpp 012-multiple-files-main.cpp
+       (header files are not required)
 */
 
 #include <iostream>
