@@ -22,7 +22,23 @@ int main() {
     std::cout << x*y << "\n";           // 2.6
     std::cout << x/y << "\n";           // 1.53846
     std::cout << 2%1 << "\n";           // 0
-    
+
+
+
+    // [COMPOUND ASSIGNMENT OPERATORS]
+    x += 10;
+    x -= 5;
+    x *= 3;
+    x /= 2;
+    x %= 2;
+    std::cout << x << "\n";             // 0
+
+
+
+    // [INCREMENT & DECREMENT OPERATORS]
+    x++;                                // 1
+    x--;                                // 0    
+
 
 
     // [CMATH LIBRARY]
